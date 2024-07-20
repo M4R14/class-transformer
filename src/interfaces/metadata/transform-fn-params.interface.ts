@@ -1,10 +1,10 @@
 import { TransformationType } from '../../enums';
 import { ClassTransformOptions } from '../class-transformer-options.interface';
 
-export interface TransformFnParams {
+export interface TransformFnParams<T = any> {
   value: any;
   key: string;
-  obj: any;
+  obj: T;
   type: TransformationType;
   options: ClassTransformOptions;
 }
